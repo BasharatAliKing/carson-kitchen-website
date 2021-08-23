@@ -1,0 +1,536 @@
+/* header section */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#header{
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 55px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    height: 70px;
+    width: 100%;
+    z-index: 20;
+
+}
+#header .left{
+   position: absolute;
+   left: 30px;
+   top: 10px;
+   color: white;
+
+}
+#header .left img{
+  width: 150px;
+}
+
+#header .mid{
+    position: absolute;
+    text-decoration: none;
+    display: flex;
+     right: 30px;
+   top: 20px;
+}
+#header .mid ul{
+ display: flex;
+ text-decoration: none;
+}
+
+#header .mid ul li a{
+    text-decoration: none;
+    display: flex;
+    padding: 0px 20px ;
+    color: white;
+}
+
+.king {
+    background-color: #ffffff0f;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    z-index: 20;
+    display: none;
+    
+}
+
+.main {
+
+    height: 100%;
+    margin-top: 50px;
+    padding: 10px 50px;
+}
+
+#sidebarMenu {
+    height: 80%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 350px;
+    display: flex;
+    transform:translateX(350px);
+    transition: transform 250ms ease-in-out;
+    background-color: #ffffffc2;
+    opacity: 20;
+}
+
+#openSidebarMenu:checked~#sidebarMenu {
+    transform: translateX(0);
+}
+
+input#openSidebarMenu {
+    display: none;
+}
+
+.sidebarIconToggle {
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    z-index: 99;
+    top: 22px;
+    right: 25px;
+    transition: all 0.3s;
+    cursor: pointer;
+
+
+}
+
+.spinner {
+    height: 3px;
+    background-color: #ffffffc2;
+    transition: all 0.3s;
+}
+
+.spinner.middle,
+.spinner.bottom {
+    margin-top: 3px;
+}
+
+
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.menu li a {
+
+    color: rgb(8, 8, 8);
+    background-color: #ffffffc2;
+    display: block;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 200px;
+    
+    padding-left: 40px;
+    
+}
+.menu  img{
+    width: 170px;
+    margin-top: 10/px;
+    margin-left: 20px;
+    color: balck;
+}
+.menu li a i{
+    color: black;
+}
+
+.menu li a:hover {
+    color: rgb(99, 97, 97);
+}
+
+/*  home section start here  */
+
+#home img{
+    margin-top: 170px;
+    
+    margin-left: 420px;
+}
+#home .button{
+   margin-left: 430px;
+   margin-top: 100px;
+  
+}
+#home a{
+    padding: 10px 30px;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+    text-decoration: none;
+  
+}
+#home a:hover{
+   color: black;
+   background-color: white;
+  
+}
+#home .img{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 570px;
+}
+
+#home .img li i{
+       font-size: 50px;
+    color: white; 
+}
+#home .img li{
+    text-decoration: none;
+    display: flex;
+    margin-left: 10px;
+}
+
+#home::before{
+    content: " ";
+    position: absolute;
+    background: url('./d.jpg.jpg')no-repeat center center/cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9999;
+}
+
+/* Carson Section Start here */
+#carson{
+    display: flex;
+    margin-top: 85px;
+}
+#carson .a img{
+    width: 100%;
+    height: 700px;
+}
+#carson .b {
+    margin-top: 30px;
+    margin-left: 120px;
+}
+#carson .b h1{
+    margin-top: 10px;
+    font-weight:lighter;
+    font-size: 18px;
+    color: #666;
+    letter-spacing: 2px;
+}
+#carson .b h2 {
+    letter-spacing: 2px;
+    font-weight:lighter;
+    font-size: 18px;
+    color: #666;
+}
+#carson .b h2 a{
+    color: blue;
+}
+#carson .b h2 a:hover{
+    color:red;
+}
+
+#carson .b ul li{
+    text-decoration: none;
+    display: flex;
+    margin-top: 7px;
+    color: #666;
+    font-size: 13px;
+}
+#carson .b  ul li span{
+    color: blue;
+}
+#carson .b  ul li span:hover{
+    color:red;
+}
+#carson .b .logo{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+#carson .b .logo li{
+    display: flex;
+   text-decoration: none;
+   display: flex;
+}
+#carson .b .logo li i{
+    font-size: 50px;
+    color: blue;
+}
+#carson .b .logo li i:hover{
+    color: red;
+}
+
+/* Grid Section start here */
+#image{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: repeat(2, 3fr);
+grid-gap: 1rem;
+}
+#image img{
+    width: 430px;
+    height: 400px;
+}
+
+#urban{
+    margin-top: 130px;
+    padding: 0px 300px;
+}
+#urban h1{
+    
+    letter-spacing: 8px;
+    font-weight: normal;
+    font-size: 30px;
+}
+#urban h2{
+    margin:20px 0px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+#urban p{
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+#urban .logo{
+    display: flex;
+    margin-top: 30px;
+   
+}
+#urban .logo li{
+    display: flex;
+   text-decoration: none;
+   display: flex;
+}
+#urban .logo li i{
+    font-size: 40px;
+    color: blue;
+}
+#urban .logo li i:hover{
+    color: red;
+}
+
+/* Dishes Section start here */
+#dishes{
+    margin-top: 150px;
+}
+#dishes img {
+   
+    width: 100%;
+    height: 50%;
+
+   
+}
+
+
+/* section slider start here */
+* {box-sizing:border-box}
+#slider{
+    font-family: 'Raleway', sans-serif;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+
+
+/* The dots/bullets/indicators */
+.dot {
+   
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  color: white;
+
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+ #slider .mySlides{
+    margin-top: 80px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    width: 75%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 30px 30px;
+    background-color: #00000069;
+    font-size: 30px;
+    color: #ffffffbd;
+    text-align: center;
+}
+#slider .mySlides p{
+    margin-top: 40px;
+    font-size: 15px;
+}
+#slider::before{
+    content: " ";
+    position: absolute;
+    background: url('./p.jpg')no-repeat center center/cover;
+    width: 100%;
+    height: 130%;
+    left: 0;
+    top: 5490px;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#calm{
+    text-align: center;
+    margin-top: 270px;
+   
+}
+#calm img{
+    width: 90%;
+}
+#calm h1{
+   margin-top: 40px;
+   font-size: 30px;
+   letter-spacing: 8px;
+  
+}
+
+/* foot section start here */
+#foot{
+    margin-top: 150px;
+    display: flex;
+    padding:0px 100px;
+    color:white;
+}
+#foot .a img{
+    width: 200px;
+    margin-right: 80px;
+}
+#foot .b ul li{
+    display: flex;
+    color: rgb(151, 151, 151);
+    margin-top: 8px;
+    font-size: 12px;
+    margin-right: 80px;
+}
+#foot .b ul span li{
+    
+    color: white;
+   
+}
+#foot .c{
+    color: rgb(151, 151, 151);
+    font-size: 12px;
+}
+#foot .c .logo{
+    display: flex;
+    font-size: 12px;
+}
+#foot .c .logo li{
+    display: flex;
+   
+    margin-top: 18px;
+    margin-right: 6px;
+    font-size: 20px;
+}
+#foot .c .logo li:hover{
+   color: white;
+}
+#foot .d span{
+    margin-left: 80px;
+    color: rgb(151, 151, 151);
+    font-size: 12px;
+}
+
+#foot::before{
+    content: " ";
+    position: absolute;
+    background:black;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    top: 7300px;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+button{
+    margin-top: 40px;
+    margin-left: 600px;
+    background-color: #00000000;
+    border: 1px solid rgb(151, 151, 151);
+    color: rgb(151, 151, 151);
+    padding: 4px 25px;
+    font-size: 16px;
+    
+}
+button:hover{
+    border-color: white;
+    color: white;
+}
